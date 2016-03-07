@@ -1,5 +1,7 @@
 package com.drew.drewmod.block;
 
+import java.util.List;
+
 import com.drew.drewmod.DrewMod;
 import com.drew.drewmod.machine.EntityMachinePrimed;
 
@@ -15,6 +17,7 @@ import net.minecraft.entity.item.EntityTNTPrimed;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.Items;
 import net.minecraft.item.Item;
+import net.minecraft.item.ItemStack;
 import net.minecraft.util.BlockPos;
 import net.minecraft.util.EnumFacing;
 import net.minecraft.world.Explosion;
@@ -32,7 +35,10 @@ public class ChrisMachine extends Block
         this.setDefaultState(this.blockState.getBaseState().withProperty(EXPLODE, Boolean.valueOf(false)));
         //TODO: this.setCreativeTab(DrewMod.DrewModTab);
     }
-
+	public void addInformation(ItemStack stack, EntityPlayer player, List lores, boolean par4)
+	{
+		lores.add("§4§lProbably won't support a 970!");
+	}
 
     public void explode(World worldIn, BlockPos pos, IBlockState state, EntityLivingBase igniter)
     {
