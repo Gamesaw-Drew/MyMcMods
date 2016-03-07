@@ -1,4 +1,3 @@
-# LOTO-MC-Mod
-## This is for minecraft 1.7.10, a port to 1.9 will be coming once forge is released for it. Skipping 1.8
-Not really just loto mod, but all my MC mods
+# MY-MC-MODS
+## This is for MC 1.8 - will be updated to 1.9 once forge is released
 http://gamesaw-drew.github.io/LOTO-MC-Mod
