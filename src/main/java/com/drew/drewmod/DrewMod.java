@@ -36,7 +36,6 @@ public class DrewMod
     // Items
     public static Item chipmunkcard;
 	public static Item Gtx970;
-	public static Block ChrisMachine;
     
     @EventHandler
     public void init(FMLInitializationEvent event)
@@ -49,7 +48,7 @@ public class DrewMod
     	GameRegistry.registerItem(Gtx970, Gtx970.getUnlocalizedName().substring(5));
     	
     	// Blocks
-    	//GameRegistry.registerBlock(ChrisMachine = new ChrisMachine());
+    	proxy.createItems();
     	
     	// Register all the item renderers
     	proxy.registerRenderers(); 

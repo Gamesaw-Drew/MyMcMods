@@ -9,7 +9,7 @@ public class CreateBlocks
 	
     public static void createBlocks() 
     {
-    	GameRegistry.registerBlock(chrisMachine = new ChrisMachine().setUnlocalizedName("ChrisMachine"));
+    	GameRegistry.registerBlock(chrisMachine = new ChrisMachine("chrisMachine"), "chrisMachine");
     	
     }
     

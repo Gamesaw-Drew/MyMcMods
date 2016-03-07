@@ -25,9 +25,10 @@ public class ChrisMachine extends Block
 {
     public static final PropertyBool EXPLODE = PropertyBool.create("explode");
 
-    public ChrisMachine()
+    public ChrisMachine(String unlocalizedName)
     {
-        super(Material.rock);
+    	super(Material.rock);
+    	this.setUnlocalizedName(unlocalizedName);
         this.setDefaultState(this.blockState.getBaseState().withProperty(EXPLODE, Boolean.valueOf(false)));
         //TODO: this.setCreativeTab(DrewMod.DrewModTab);
     }
@@ -41,7 +42,7 @@ public class ChrisMachine extends Block
             {
                 EntityTNTPrimed entitytntprimed = new EntityTNTPrimed(worldIn, (double)((float)pos.getX() + 0.5F), (double)pos.getY(), (double)((float)pos.getZ() + 0.5F), igniter);
                 worldIn.spawnEntityInWorld(entitytntprimed);
-                worldIn.playSoundAtEntity(entitytntprimed, "game.tnt.primed", 1.0F, 1.0F);
+                worldIn.playSoundAtEntity(entitytntprimed, "drewmod:machines", 1.0F, 1.0F);
             }
         }
     }
