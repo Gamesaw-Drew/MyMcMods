@@ -18,10 +18,13 @@ import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.Items;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
+import net.minecraft.util.AxisAlignedBB;
 import net.minecraft.util.BlockPos;
 import net.minecraft.util.EnumFacing;
 import net.minecraft.world.Explosion;
 import net.minecraft.world.World;
+import net.minecraftforge.fml.relauncher.Side;
+import net.minecraftforge.fml.relauncher.SideOnly;
 
 //TODO: make this do something that after 1 minecraft hour the GET OFF THE MACHINES sound plays and locks you out of it until the next minecraft day
 public class ChrisMachine extends Block
@@ -30,16 +33,23 @@ public class ChrisMachine extends Block
 
     public ChrisMachine(String unlocalizedName)
     {
-    	super(Material.rock);
+    	super(Material.anvil);
     	this.setUnlocalizedName(unlocalizedName);
         this.setDefaultState(this.blockState.getBaseState().withProperty(EXPLODE, Boolean.valueOf(false)));
-        //TODO: this.setCreativeTab(DrewMod.DrewModTab);
+        this.setCreativeTab(DrewMod.tabDrew);
     }
-	public void addInformation(ItemStack stack, EntityPlayer player, List lores, boolean par4)
+	public void addInformation(Block block, EntityPlayer player, List lores, boolean par4)
 	{
 		lores.add("§4§lProbably won't support a 970!");
 	}
-
+	
+	// Will make it so the the machine will not XRAY through ground
+    public boolean isOpaqueCube()
+    {
+        return false;
+    }
+    
+    
     public void explode(World worldIn, BlockPos pos, IBlockState state, EntityLivingBase igniter)
     {
         if (!worldIn.isRemote)

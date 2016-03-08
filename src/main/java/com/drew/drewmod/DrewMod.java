@@ -6,8 +6,10 @@ import com.drew.drewmod.items.ChipmunkCard;
 import com.drew.drewmod.items.Gtx970;
 
 import net.minecraft.block.Block;
+import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.init.Blocks;
 import net.minecraft.item.Item;
+import net.minecraft.item.ItemStack;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.Mod.EventHandler;
 import net.minecraftforge.fml.common.Mod.Instance;
@@ -41,10 +43,10 @@ public class DrewMod
     public void init(FMLInitializationEvent event)
     {
     	// Items
-    	chipmunkcard = new ChipmunkCard().setUnlocalizedName("chipmunkcard");
+    	chipmunkcard = new ChipmunkCard().setUnlocalizedName("chipmunkcard").setCreativeTab(tabDrew);
     	GameRegistry.registerItem(chipmunkcard, chipmunkcard.getUnlocalizedName().substring(5));
 
-    	Gtx970 = new Gtx970().setUnlocalizedName("Gtx970");
+    	Gtx970 = new Gtx970().setUnlocalizedName("Gtx970").setCreativeTab(tabDrew);
     	GameRegistry.registerItem(Gtx970, Gtx970.getUnlocalizedName().substring(5));
     	
     	// Blocks
@@ -55,4 +57,13 @@ public class DrewMod
     	
 
     }
+	public static CreativeTabs tabDrew = new CreativeTabs("tabDrew"){
+		@Override
+		public Item getTabIconItem(){
+			return new ItemStack(Gtx970).getItem();
+		}
+		
+		
+	};
+	
 }
