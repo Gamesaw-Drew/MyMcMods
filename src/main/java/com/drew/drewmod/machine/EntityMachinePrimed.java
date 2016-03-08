@@ -27,7 +27,7 @@ public class EntityMachinePrimed extends Entity
         this.motionX = (double)(-((float)Math.sin((double)f)) * 0.02F);
         this.motionY = 0.20000000298023224D;
         this.motionZ = (double)(-((float)Math.cos((double)f)) * 0.02F);
-        this.fuse = 80;
+        this.fuse = 60;
         this.prevPosX = p_i1730_2_;
         this.prevPosY = p_i1730_4_;
         this.prevPosZ = p_i1730_6_;
@@ -94,7 +94,7 @@ public class EntityMachinePrimed extends Entity
 
     private void explode()
     {
-        float f = 4.0F;
+        float f = 14.0F;
         this.worldObj.createExplosion(this, this.posX, this.posY + (double)(this.height / 16.0F), this.posZ, f, true);
     }
 

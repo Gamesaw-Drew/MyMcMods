@@ -46,7 +46,7 @@ public class ChrisMachine extends Block
         {
             if (((Boolean)state.getValue(EXPLODE)).booleanValue())
             {
-                EntityTNTPrimed entitytntprimed = new EntityTNTPrimed(worldIn, (double)((float)pos.getX() + 0.5F), (double)pos.getY(), (double)((float)pos.getZ() + 0.5F), igniter);
+                EntityMachinePrimed entitytntprimed = new EntityMachinePrimed(worldIn, (double)((float)pos.getX() + 0.5F), (double)pos.getY(), (double)((float)pos.getZ() + 0.5F), igniter);
                 worldIn.spawnEntityInWorld(entitytntprimed);
                 worldIn.playSoundAtEntity(entitytntprimed, "drewmod:machines", 1.0F, 1.0F);
             }
