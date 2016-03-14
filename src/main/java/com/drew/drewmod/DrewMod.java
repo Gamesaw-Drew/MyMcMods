@@ -3,6 +3,7 @@ package com.drew.drewmod;
 import com.drew.drewmod.block.ChrisMachine;
 import com.drew.drewmod.init.IProxy;
 import com.drew.drewmod.items.ChipmunkCard;
+import com.drew.drewmod.items.CreateItems;
 import com.drew.drewmod.items.Gtx970;
 
 import net.minecraft.block.Block;
@@ -34,33 +35,21 @@ public class DrewMod
     
     @Instance(DrewMod.MODID)
     public static DrewMod modInstance;
-    
-    // Items
-    public static Item chipmunkcard;
-	public static Item Gtx970;
-    
+
     @EventHandler
     public void init(FMLInitializationEvent event)
     {
-    	// Items
-    	chipmunkcard = new ChipmunkCard().setUnlocalizedName("chipmunkcard").setCreativeTab(tabDrew);
-    	GameRegistry.registerItem(chipmunkcard, chipmunkcard.getUnlocalizedName().substring(5));
-
-    	Gtx970 = new Gtx970().setUnlocalizedName("Gtx970").setCreativeTab(tabDrew);
-    	GameRegistry.registerItem(Gtx970, Gtx970.getUnlocalizedName().substring(5));
-    	
-    	// Blocks
+    	// items and blocks
     	proxy.createItems();
     	
     	// Register all the item renderers
     	proxy.registerRenderers(); 
-    	
-
+       	
     }
 	public static CreativeTabs tabDrew = new CreativeTabs("tabDrew"){
 		@Override
 		public Item getTabIconItem(){
-			return new ItemStack(Gtx970).getItem();
+			return new ItemStack(CreateItems.Gtx970).getItem();
 		}
 		
 		

@@ -1,6 +1,7 @@
 package com.drew.drewmod.init;
 
 import com.drew.drewmod.block.CreateBlocks;
+import com.drew.drewmod.items.CreateItems;
 
 
 public class ServerProxy implements IProxy
@@ -13,6 +14,7 @@ public class ServerProxy implements IProxy
 	public void createItems()
 	{
 		CreateBlocks.createBlocks();
+		CreateItems.createItems();
 	}
 
 }

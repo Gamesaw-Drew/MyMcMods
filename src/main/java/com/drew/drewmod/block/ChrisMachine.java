@@ -3,6 +3,7 @@ package com.drew.drewmod.block;
 import java.util.List;
 
 import com.drew.drewmod.DrewMod;
+import com.drew.drewmod.items.CreateItems;
 import com.drew.drewmod.machine.EntityMachinePrimed;
 
 import net.minecraft.block.Block;
@@ -69,7 +70,7 @@ public class ChrisMachine extends Block
         {
             Item item = playerIn.getCurrentEquippedItem().getItem();
 
-            if (item == DrewMod.Gtx970)
+            if (item == CreateItems.Gtx970)
             {
                 this.explode(worldIn, pos, state.withProperty(EXPLODE, Boolean.valueOf(true)), playerIn);
 

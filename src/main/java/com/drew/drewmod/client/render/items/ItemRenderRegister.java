@@ -1,6 +1,7 @@
 package com.drew.drewmod.client.render.items;
 
 import com.drew.drewmod.DrewMod;
+import com.drew.drewmod.items.CreateItems;
 
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.resources.model.ModelResourceLocation;
@@ -13,8 +14,8 @@ public class ItemRenderRegister
 
 	public static void registerItemRenderer()
 	{
-	    reg(DrewMod.chipmunkcard);
-	    reg(DrewMod.Gtx970);
+	    reg(CreateItems.chipmunkcard);
+	    reg(CreateItems.Gtx970);
 	}
 
 	public static void reg(Item item)
