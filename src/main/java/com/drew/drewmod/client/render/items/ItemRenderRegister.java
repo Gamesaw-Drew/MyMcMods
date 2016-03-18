@@ -16,6 +16,7 @@ public class ItemRenderRegister
 	{
 	    reg(CreateItems.chipmunkcard);
 	    reg(CreateItems.Gtx970);
+	    reg(CreateItems.KappaFish);
 	}
 
 	public static void reg(Item item)
