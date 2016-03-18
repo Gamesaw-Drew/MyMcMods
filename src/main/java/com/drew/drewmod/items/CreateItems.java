@@ -23,6 +23,7 @@ public class CreateItems
     	GameRegistry.registerItem(Gtx970, Gtx970.getUnlocalizedName().substring(5));
     	
     	KappaFish = new ItemFood(20, 1.0F, true).setUnlocalizedName("kappaFish").setCreativeTab(DrewMod.tabDrew);
+    	GameRegistry.registerItem(KappaFish, KappaFish.getUnlocalizedName().substring(5));
     }
     
 }
