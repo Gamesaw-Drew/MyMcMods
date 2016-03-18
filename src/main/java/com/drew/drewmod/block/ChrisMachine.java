@@ -11,17 +11,19 @@ import net.minecraft.block.BlockTNT;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.properties.IProperty;
 import net.minecraft.block.properties.PropertyBool;
-import net.minecraft.block.state.BlockState;
+import net.minecraft.block.state.BlockStateContainer;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.item.EntityTNTPrimed;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.Items;
+import net.minecraft.init.SoundEvents;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
-import net.minecraft.util.AxisAlignedBB;
-import net.minecraft.util.BlockPos;
+import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.EnumFacing;
+import net.minecraft.util.EnumHand;
+import net.minecraft.util.SoundCategory;
 import net.minecraft.world.Explosion;
 import net.minecraft.world.World;
 import net.minecraftforge.fml.relauncher.Side;
@@ -45,7 +47,12 @@ public class ChrisMachine extends Block
 	}
 	
 	// Will make it so the the machine will not XRAY through ground
-    public boolean isOpaqueCube()
+    public boolean isFullyOpaque(IBlockState state)
+    {
+        return false;
+    }
+    
+    public boolean isFullBlock(IBlockState state)
     {
         return false;
     }
@@ -59,16 +66,17 @@ public class ChrisMachine extends Block
             {
                 EntityMachinePrimed entitytntprimed = new EntityMachinePrimed(worldIn, (double)((float)pos.getX() + 0.5F), (double)pos.getY(), (double)((float)pos.getZ() + 0.5F), igniter);
                 worldIn.spawnEntityInWorld(entitytntprimed);
-                worldIn.playSoundAtEntity(entitytntprimed, "drewmod:machines", 1.0F, 1.0F);
+                worldIn.playSound((EntityPlayer)null, entitytntprimed.posX, entitytntprimed.posY, entitytntprimed.posZ, SoundEvents.entity_tnt_primed, SoundCategory.BLOCKS, 1.0F, 1.0F);
+                // TODO: Make the game play the right sound
             }
         }
     }
 
-    public boolean onBlockActivated(World worldIn, BlockPos pos, IBlockState state, EntityPlayer playerIn, EnumFacing side, float hitX, float hitY, float hitZ)
+    public boolean onBlockActivated(World worldIn, BlockPos pos, IBlockState state, EntityPlayer playerIn, EnumHand hand, ItemStack heldItem, EnumFacing side, float hitX, float hitY, float hitZ)
     {
-        if (playerIn.getCurrentEquippedItem() != null)
+        if (heldItem != null)
         {
-            Item item = playerIn.getCurrentEquippedItem().getItem();
+            Item item = heldItem.getItem();
 
             if (item == CreateItems.Gtx970)
             {
@@ -78,7 +86,7 @@ public class ChrisMachine extends Block
             }
         }
 
-        return super.onBlockActivated(worldIn, pos, state, playerIn, side, hitX, hitY, hitZ);
+        return super.onBlockActivated(worldIn, pos, state, playerIn, hand, heldItem, side, hitX, hitY, hitZ);
     }
 
     /**
@@ -105,9 +113,9 @@ public class ChrisMachine extends Block
         return ((Boolean)state.getValue(EXPLODE)).booleanValue() ? 1 : 0;
     }
 
-    protected BlockState createBlockState()
+    protected BlockStateContainer createBlockState()
     {
-        return new BlockState(this, new IProperty[] {EXPLODE});
+        return new BlockStateContainer(this, new IProperty[] {EXPLODE});
     }
     
 }

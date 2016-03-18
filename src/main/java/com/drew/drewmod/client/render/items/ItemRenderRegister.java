@@ -4,7 +4,7 @@ import com.drew.drewmod.DrewMod;
 import com.drew.drewmod.items.CreateItems;
 
 import net.minecraft.client.Minecraft;
-import net.minecraft.client.renderer.block.model.ModelResourceLocation
+import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.item.Item;
 
 public class ItemRenderRegister
@@ -17,6 +17,7 @@ public class ItemRenderRegister
 	    reg(CreateItems.chipmunkcard);
 	    reg(CreateItems.Gtx970);
 	    reg(CreateItems.KappaFish);
+	    reg(CreateItems.oberlordSword);
 	}
 
 	public static void reg(Item item)
