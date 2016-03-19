@@ -46,17 +46,16 @@ public class ChrisMachine extends Block
 		lores.add("§4§lProbably won't support a 970!");
 	}
 	
-	// Will make it so the the machine will not XRAY through ground
-    public boolean isFullyOpaque(IBlockState state)
+    public boolean isFullCube(IBlockState state)
     {
         return false;
     }
     
-    public boolean isFullBlock(IBlockState state)
+    public boolean isOpaqueCube(IBlockState state)
     {
         return false;
     }
-    
+
     
     public void explode(World worldIn, BlockPos pos, IBlockState state, EntityLivingBase igniter)
     {
