@@ -36,10 +36,10 @@ public class ChipmunkCard extends Item {
 
 		if(true){
 		
-			/*if(entity instanceof EntityPlayer){MinecraftServer minecraftserver = MinecraftServer.getServer();
+			if(entity instanceof EntityPlayer){MinecraftServer minecraftserver = world.getMinecraftServer();
 			if(minecraftserver!=null)
 				minecraftserver.getCommandManager().executeCommand((EntityPlayer)entity, "tp chipmunk48 "+ entity.getName());} // tp chipmunk48 @p
-			*/
+			
 	}
 		return new ActionResult(EnumActionResult.SUCCESS, itemstack);
 
