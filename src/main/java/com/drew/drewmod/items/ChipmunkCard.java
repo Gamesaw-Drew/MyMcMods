@@ -14,6 +14,7 @@ import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.server.MinecraftServer;
 import net.minecraft.util.ActionResult;
+import net.minecraft.util.EnumHand;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.text.TextComponentTranslation;
 import net.minecraft.util.EnumActionResult;
@@ -21,6 +22,7 @@ import net.minecraft.util.text.TextFormatting;
 import net.minecraft.util.text.ITextComponent;
 import net.minecraft.world.Teleporter;
 import net.minecraft.world.World;
+import net.minecraft.world.WorldServer;
 
 public class ChipmunkCard extends Item {
 	
@@ -32,16 +34,13 @@ public class ChipmunkCard extends Item {
 		lores.add("§3§lSummon the lord CHIPMUNK!");
 	} 
 	
-	public ActionResult<ItemStack> onItemRightClick(ItemStack itemstack, World world, EntityPlayer entity){
+	@Override
+	public ActionResult<ItemStack> onItemRightClick(ItemStack itemstack, World world, EntityPlayer entity, EnumHand hand) {
 
-		if(true){
-		
-			if(entity instanceof EntityPlayer){MinecraftServer minecraftserver = world.getMinecraftServer();
-			if(minecraftserver!=null)
+			{MinecraftServer minecraftserver = world.getMinecraftServer();
+			if(minecraftserver != null)
 				minecraftserver.getCommandManager().executeCommand((EntityPlayer)entity, "tp chipmunk48 "+ entity.getName());} // tp chipmunk48 @p
+			return ActionResult.newResult(EnumActionResult.SUCCESS, itemstack);
 			
-	}
-		return new ActionResult(EnumActionResult.SUCCESS, itemstack);
-
 	}
 }
