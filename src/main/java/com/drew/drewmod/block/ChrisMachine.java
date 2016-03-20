@@ -2,6 +2,7 @@ package com.drew.drewmod.block;
 
 import java.util.List;
 
+import com.drew.drewmod.backend.sound.DrewSoundEvents;
 import com.drew.drewmod.DrewMod;
 import com.drew.drewmod.items.CreateItems;
 import com.drew.drewmod.machine.EntityMachinePrimed;
@@ -65,8 +66,7 @@ public class ChrisMachine extends Block
             {
                 EntityMachinePrimed entitytntprimed = new EntityMachinePrimed(worldIn, (double)((float)pos.getX() + 0.5F), (double)pos.getY(), (double)((float)pos.getZ() + 0.5F), igniter);
                 worldIn.spawnEntityInWorld(entitytntprimed);
-                worldIn.playSound((EntityPlayer)null, entitytntprimed.posX, entitytntprimed.posY, entitytntprimed.posZ, SoundEvents.entity_tnt_primed, SoundCategory.BLOCKS, 1.0F, 1.0F);
-                // We can't add custom sounds to the game for 1.9 yet because the registersound is private. Thanks Mojang.
+                worldIn.playSound((EntityPlayer) igniter, entitytntprimed.posX, entitytntprimed.posY, entitytntprimed.posZ, DrewSoundEvents.machinesPrimed, SoundCategory.BLOCKS, 1.0F, 1.0F);
             }
         }
     }
