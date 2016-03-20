@@ -37,9 +37,16 @@ public class ChipmunkCard extends Item {
 	@Override
 	public ActionResult<ItemStack> onItemRightClick(ItemStack itemstack, World world, EntityPlayer entity, EnumHand hand) {
 
+			// Get the server
 			{MinecraftServer minecraftserver = world.getMinecraftServer();
 			if(minecraftserver != null)
+				
+				// Run the command
 				minecraftserver.getCommandManager().executeCommand((EntityPlayer)entity, "tp chipmunk48 "+ entity.getName());} // tp chipmunk48 @p
+			
+			// Apply a cool down to the card - 60 ticks (3 second cooldown)
+			entity.getCooldownTracker().setCooldown(this, 60);
+			
 			return ActionResult.newResult(EnumActionResult.SUCCESS, itemstack);
 			
 	}
