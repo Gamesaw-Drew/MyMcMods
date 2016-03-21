@@ -1,5 +1,5 @@
 {
-    "parent":"drewmod:item/defaultitem",
+    "parent":"item/handheld",
     "textures": {
         "layer0":"drewmod:items/item.kappafish"
     }
