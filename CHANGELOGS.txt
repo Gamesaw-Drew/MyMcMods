@@ -29,6 +29,7 @@ Chris Machines:
 
 1.9-0_0_3:
 -Fixed alot of imports
+-Added Overlord Sword
 
 1.9-0_0_2:
 -Fixed a couple imports
