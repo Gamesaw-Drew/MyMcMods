@@ -1,0 +1,37 @@
+1.9-0_0_11:
+Chipmunk Card:
+	-Added a cooldown between uses
+
+1.9-0_0_10:
+Chipmunk Card:
+	-Add summon functionality
+
+1.9-0_0_9:
+-Added a sound events file, doesnt work yet
+
+1.9-0_0_8:
+Chipmunk Card:
+	-Replaced minecraftserver.getserver with world.getminecraftserver
+
+1.9-0_0_7:
+Chris Machines:
+	-Changed place holder sfx
+	
+1.9-0_0_6:
+-Remove non functional sound events
+
+1.9-0_0_5:
+-Add a sound events file
+
+1.9-0_0_4:
+Chris Machines:
+	-Fixed Chris Machine being treated as OPAQUE
+
+1.9-0_0_3:
+-Fixed alot of imports
+
+1.9-0_0_2:
+-Fixed a couple imports
+
+1.9-0_0_1:
+-Updated forge to 1.9
