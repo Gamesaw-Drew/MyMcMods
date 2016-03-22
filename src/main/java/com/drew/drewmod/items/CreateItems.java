@@ -16,13 +16,14 @@ public class CreateItems
 	public static Item Gtx970;
 	public static Item KappaFish;
 	public static Item oberlordSword;
+	public static Item oberlordPick;
 	
 	public static final Item.ToolMaterial oberlordToolMaterial = EnumHelper.addToolMaterial("oberlordToolMaterial", 5, 16542, 20.0F, 16.0F, 30);
 
 	
     public static void createItems() 
     {
-    	chipmunkcard = new ChipmunkCard().setUnlocalizedName("chipmunkcard").setCreativeTab(DrewMod.tabDrew);
+    	chipmunkcard = new ChipmunkCard().setUnlocalizedName("chipmunkcard").setCreativeTab(DrewMod.tabLoto);
     	GameRegistry.registerItem(chipmunkcard, chipmunkcard.getUnlocalizedName().substring(5));
 
     	Gtx970 = new Gtx970().setUnlocalizedName("Gtx970").setCreativeTab(DrewMod.tabDrew);
