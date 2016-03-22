@@ -18,6 +18,7 @@ public class ItemRenderRegister
 	    reg(CreateItems.Gtx970);
 	    reg(CreateItems.KappaFish);
 	    reg(CreateItems.oberlordSword);
+	    reg(CreateItems.oberlordAxe);
 	}
 
 	public static void reg(Item item)

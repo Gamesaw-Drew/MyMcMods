@@ -11,18 +11,12 @@ public class ItemOberlordSword extends ItemSword {
 
 
 	private double AttSpeed;
-	private AttributeModifier attackSpeed;
+	private float attackSpeed;
 
-	public ItemOberlordSword(ToolMaterial material, double Speed) {
+	public ItemOberlordSword(ToolMaterial material, float Speed) {
 		super(material);
-		this.AttSpeed = Speed;
-		getAttackSpeed();
+		this.attackSpeed = Speed;
 	}
 	
-	public AttributeModifier getAttackSpeed(){
-		attackSpeed = new AttributeModifier(ATTACK_SPEED_MODIFIER, "Weapon modifier", this.AttSpeed, 0);
-		
-		return attackSpeed;
-	}
 
 }

@@ -19,6 +19,7 @@ public class CreateItems
 	public static Item KappaFish;
 	public static Item oberlordSword;
 	public static Item oberlordPick;
+	public static Item oberlordAxe;
 	
 	public static final Item.ToolMaterial oberlordToolMaterial = EnumHelper.addToolMaterial("oberlordToolMaterial", 5, 16542, 20.0F, 16.0F, 30);
 
@@ -34,8 +35,11 @@ public class CreateItems
     	KappaFish = new ItemFood(20, 1.0F, true).setUnlocalizedName("kappaFish").setCreativeTab(DrewMod.tabDrew);
     	GameRegistry.registerItem(KappaFish, KappaFish.getUnlocalizedName().substring(5));
     	
-	oberlordSword = new ItemOberlordSword(oberlordToolMaterial, 2).setUnlocalizedName("OberlordSword").setCreativeTab(DrewMod.tabLoto);
-	GameRegistry.registerItem(oberlordSword, oberlordSword.getUnlocalizedName().substring(5));
+		oberlordSword = new ItemOberlordSword(oberlordToolMaterial, 5.0F).setUnlocalizedName("OberlordSword").setCreativeTab(DrewMod.tabLoto);
+		GameRegistry.registerItem(oberlordSword, oberlordSword.getUnlocalizedName().substring(5));
+		
+		oberlordAxe = new ItemOberlordAxe(oberlordToolMaterial).setUnlocalizedName("OberlordAxe").setCreativeTab(DrewMod.tabLoto);
+		GameRegistry.registerItem(oberlordAxe, oberlordAxe.getUnlocalizedName().substring(5));
 	
 	/*	For some reason ITEMPICKAXE is protected, ty mojang
 	oberlordPick = new ItemPickaxe(oberlordToolMaterial).setUnlocalizedName("OberlordPick").setCreativeTab(DrewMod.tabLoto)
