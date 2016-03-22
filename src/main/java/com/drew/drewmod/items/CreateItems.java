@@ -31,8 +31,11 @@ public class CreateItems
     	KappaFish = new ItemFood(20, 1.0F, true).setUnlocalizedName("kappaFish").setCreativeTab(DrewMod.tabDrew);
     	GameRegistry.registerItem(KappaFish, KappaFish.getUnlocalizedName().substring(5));
     	
-		oberlordSword = new ItemOberlordSword(oberlordToolMaterial, 2).setUnlocalizedName("OberlordSword").setCreativeTab(DrewMod.tabDrew);
-		GameRegistry.registerItem(oberlordSword, oberlordSword.getUnlocalizedName().substring(5));
+	oberlordSword = new ItemOberlordSword(oberlordToolMaterial, 2).setUnlocalizedName("OberlordSword").setCreativeTab(DrewMod.tabLoto);
+	GameRegistry.registerItem(oberlordSword, oberlordSword.getUnlocalizedName().substring(5));
+	
+	oberlordPick = new ItemPickaxe(oberlordToolMaterial).setUnlocalizedName("OberlordPick").setCreativeTab(DrewMod.tabLoto)
+    	GameRegistry.registerItem(oberlordPick, oberlordPick.getUnlocalizedName().substring(5));
     }
     
 }
