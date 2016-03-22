@@ -6,6 +6,7 @@ import com.drew.drewmod.block.CreateBlocks;
 import com.drew.drewmod.client.render.blocks.BlockRenderRegister;
 import com.drew.drewmod.client.render.items.ItemRenderRegister;
 import com.drew.drewmod.items.CreateItems;
+import com.drew.drewmod.backend.sound.DrewSoundEvents;
 
 public class ClientProxy implements IProxy
 {
@@ -21,5 +22,10 @@ public class ClientProxy implements IProxy
 	{
 		CreateBlocks.createBlocks();
 		CreateItems.createItems();
+	}
+	
+	public void createSounds()
+	{
+		DrewSoundEvents.regSnds();
 	}
 }
