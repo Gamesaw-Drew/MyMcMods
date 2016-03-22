@@ -48,7 +48,8 @@ public class DrewMod
     }
 	public static CreativeTabs tabDrew = new CreativeTabs("tabDrew"){
 		@Override
-		public Item getTabIconItem(){
+		public Item getTabIconItem()
+		{
 			return new ItemStack(CreateItems.Gtx970).getItem();
 		}
 		
@@ -58,10 +59,10 @@ public class DrewMod
 	public static CreativeTabs tabLoto = new CreativeTabs("tabLoto")
 	{
 		@Override
-		public iem getTabIconItem()
+		public Item getTabIconItem()
 		{
 			return new ItemStack(CreateItems.oberlordSword).getItem();
 		}
-	}
+	};
 	
 }

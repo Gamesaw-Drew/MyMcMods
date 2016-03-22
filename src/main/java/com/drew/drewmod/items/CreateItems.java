@@ -5,6 +5,7 @@ import com.drew.drewmod.DrewMod;
 import net.minecraft.block.Block;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemFood;
+import net.minecraft.item.ItemPickaxe;
 import net.minecraft.item.ItemSword;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 import net.minecraftforge.common.util.EnumHelper;
@@ -35,8 +36,10 @@ public class CreateItems
 	oberlordSword = new ItemOberlordSword(oberlordToolMaterial, 2).setUnlocalizedName("OberlordSword").setCreativeTab(DrewMod.tabLoto);
 	GameRegistry.registerItem(oberlordSword, oberlordSword.getUnlocalizedName().substring(5));
 	
+	/*	For some reason ITEMPICKAXE is protected, ty mojang
 	oberlordPick = new ItemPickaxe(oberlordToolMaterial).setUnlocalizedName("OberlordPick").setCreativeTab(DrewMod.tabLoto)
-    	GameRegistry.registerItem(oberlordPick, oberlordPick.getUnlocalizedName().substring(5));
+	GameRegistry.registerItem(oberlordPick, oberlordPick.getUnlocalizedName().substring(5));
+	*/
     }
     
 }

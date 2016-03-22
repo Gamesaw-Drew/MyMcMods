@@ -24,8 +24,4 @@ public class ClientProxy implements IProxy
 		CreateItems.createItems();
 	}
 	
-	public void createSounds()
-	{
-		DrewSoundEvents.regSnds();
-	}
 }
