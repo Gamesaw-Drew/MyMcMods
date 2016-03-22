@@ -55,4 +55,13 @@ public class DrewMod
 		
 	};
 	
+	public static CreativeTabs tabLoto = new CreativeTabs("tabLoto")
+	{
+		@Override
+		public iem getTabIconItem()
+		{
+			return new ItemStack(CreateItems.oberlordSword).getItem();
+		}
+	}
+	
 }
