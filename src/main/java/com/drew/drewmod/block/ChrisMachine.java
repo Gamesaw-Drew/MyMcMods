@@ -4,7 +4,7 @@ import java.util.List;
 
 import com.drew.drewmod.backend.sound.DrewSoundEvents;
 import com.drew.drewmod.DrewMod;
-import com.drew.drewmod.items.CreateItems;
+import com.drew.drewmod.reg.CreateItems;
 import com.drew.drewmod.machine.EntityMachinePrimed;
 
 import net.minecraft.block.Block;
@@ -82,6 +82,10 @@ public class ChrisMachine extends Block
                 this.explode(worldIn, pos, state.withProperty(EXPLODE, Boolean.valueOf(true)), playerIn);
 
                 return true;
+            }
+            
+            if (item != CreateItems.Gtx970)
+            {
             }
         }
 

@@ -1,4 +1,6 @@
-package com.drew.drewmod.block;
+package com.drew.drewmod.reg;
+
+import com.drew.drewmod.block.ChrisMachine;
 
 import net.minecraft.block.Block;
 import net.minecraftforge.fml.common.registry.GameRegistry;

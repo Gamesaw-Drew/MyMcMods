@@ -6,7 +6,7 @@ import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.item.Item;
 
 import com.drew.drewmod.DrewMod;
-import com.drew.drewmod.block.CreateBlocks;
+import com.drew.drewmod.reg.CreateBlocks;
 
 public class BlockRenderRegister
 {

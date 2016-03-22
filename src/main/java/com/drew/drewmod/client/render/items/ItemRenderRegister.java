@@ -1,7 +1,7 @@
 package com.drew.drewmod.client.render.items;
 
 import com.drew.drewmod.DrewMod;
-import com.drew.drewmod.items.CreateItems;
+import com.drew.drewmod.reg.CreateItems;
 
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;

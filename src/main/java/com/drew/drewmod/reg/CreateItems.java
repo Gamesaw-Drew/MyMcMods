@@ -1,6 +1,7 @@
-package com.drew.drewmod.items;
+package com.drew.drewmod.reg;
 
 import com.drew.drewmod.DrewMod;
+import com.drew.drewmod.items.*;
 
 import net.minecraft.block.Block;
 import net.minecraft.item.Item;
