@@ -16,7 +16,7 @@ public class ItemOberlordAxe extends ItemTool
 {
     private static final Set<Block> EFFECTIVE_ON = Sets.newHashSet(new Block[] {Blocks.planks, Blocks.bookshelf, Blocks.log, Blocks.log2, Blocks.chest, Blocks.pumpkin, Blocks.lit_pumpkin, Blocks.melon_block, Blocks.ladder, Blocks.wooden_button, Blocks.wooden_pressure_plate});
     private static final float ATTACK_DAMAGE = 14.0F;
-    private static final float ATTACK_SPEED = -4.0F;
+    private static final float ATTACK_SPEED = -2.5F;
 
     public ItemOberlordAxe(Item.ToolMaterial material)
     {
